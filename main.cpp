@@ -20,7 +20,7 @@ struct computador
     struct computador_gabinete gabinete; 
 };
 
-void imprimir (computador);
+void imprimir (const computador &);
 
 int main(int argc, char **argv)
 {
@@ -60,15 +60,15 @@ int main(int argc, char **argv)
     return 0;
 }
 
-void imprimir (computador maquina)
+void imprimir (const computador &MAQUINA)
 {
     cout << "Computador 01. \n";
-    cout << "Marca: " << maquina.marca << "\n";
-    cout << "Ano: " << maquina.ano << "\n";
-    cout << "Fabricante do monitor: "<< maquina.fab_monitor << "\n";
-    cout << "Fabricante da placa de video: " << maquina.gabinete.fab_video << "\n";
-    cout << "Fabricante da placa de rede: " << maquina.gabinete.fab_rede << "\n";
-    cout << "Tipo de memoria: " << maquina.gabinete.tipo_memoria << "\n";
-    cout << "Quantidade de memoria: " << maquina.gabinete.quant_memoria << " GB\n";
-    cout << "Estado: " << maquina.estado << "\n";
+    cout << "Marca: " << MAQUINA.marca << "\n";
+    cout << "Ano: " << MAQUINA.ano << "\n";
+    cout << "Fabricante do monitor: "<< MAQUINA.fab_monitor << "\n";
+    cout << "Fabricante da placa de video: " << MAQUINA.gabinete.fab_video << "\n";
+    cout << "Fabricante da placa de rede: " << MAQUINA.gabinete.fab_rede << "\n";
+    cout << "Tipo de memoria: " << MAQUINA.gabinete.tipo_memoria << "\n";
+    cout << "Quantidade de memoria: " << MAQUINA.gabinete.quant_memoria << " GB\n";
+    cout << "Estado: " << MAQUINA.estado << "\n";
 }
